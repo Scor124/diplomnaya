@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/Schedule', function (){
-    return view('');
-});
+
 
 Route::get('/', function () {
-    return view('welcome');
+    $users = DB::table('Staff')->get();
+    return view('welcome', compact('users'));
 });

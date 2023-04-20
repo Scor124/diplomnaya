@@ -81,10 +81,10 @@ return [
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'ANDREWS1'),
-            'port' => env('DB_PORT', ''),
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '1434'),
             'database' => env('DB_DATABASE', 'Study_diary'),
-            'username' => env('DB_USERNAME', 'root'),
+            'username' => env('DB_USERNAME', 'ANDREWS1\Andrew'),
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
