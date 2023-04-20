@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class StaffController extends Controller
 {
-    public function allStaff()
+    public static function allStaff()
     {
         return DB::table('Staff')->get();
     }

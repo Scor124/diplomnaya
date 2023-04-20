@@ -27,5 +27,14 @@
                 </li>
             @endforeach
         </ol>
+    <div class="align-content-center">
+        <ul>
+            @foreach(\App\Http\Controllers\StaffController::allStaff() as $pre)
+                <li>
+                    <label>{{ $pre->FIO }}</label>
+                </li>
+            @endforeach
+        </ul>
+    </div>
     </body>
 </html>
