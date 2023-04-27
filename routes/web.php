@@ -1,21 +1,23 @@
 <?php
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/**
+ * @return Collection
+ */
 
+Route::get('/Class/{id}', function ($id)
+{
+    $ns = DB::table('Class')->where('ID',$id)->first('Name')->get();
+    return \App\Http\Controllers\StaffController::studentsOfGroup($ns);
+});
 
+Route::get('/login', function (){
+    return view('welcome');
+});
+Route::post('/login', [\App\Http\Controllers\StaffController::class, 'login']);
 
-Route::get('/', function () {
-    $users = DB::table('Staff')->get();
-    return view('welcome', compact('users'));
+Route::get('/ActionsPage', function () {
+    return view('ActionsPage');
 });
