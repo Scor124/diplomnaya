@@ -24,14 +24,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-
-        for ($t = 0;$t<38;$t++){
+        for ($t = 0;$t<40;$t++){
             \DB::table('Staff')->insert([
                 'FIO' => $faker->lastName.' '.$faker->name.' '.$faker->firstName,
                 'DateOfBirth' => date("d-m-Y", mt_rand(1, time())),
                 'Phone' => Random::generate(11, '0-9'),
-                'Email' => Str::random(10).'@gmail.com',
-                'Password' => Hash::make('password')
+                'email' => Str::random(10).'@gmail.com',
+                'password' => Hash::make('password')
             ]);
         }
 

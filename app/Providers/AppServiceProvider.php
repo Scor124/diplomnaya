@@ -14,9 +14,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('User', function ($app) {
-            return new User('', '', '');
-        });
         //
     }
 
@@ -27,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
         //
     }
 }
