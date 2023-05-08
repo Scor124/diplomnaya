@@ -9,14 +9,21 @@ return new class extends Migration {
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->integer('UserID');
+            $table->integer('UserID')->unique();
             $table->integer('Class');
             $table->date('Studying_since');
+            /**
             $table->foreign('UserID')
                 ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-        });
+
+            $table->foreign('Class')
+                ->references('id')->on('classes')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+             */
+            });
     }
 
     public function down(): void

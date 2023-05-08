@@ -9,13 +9,15 @@ return new class extends Migration {
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
-            $table->integer('UserID');
+            $table->integer('UserID')->unique();
             $table->date('works_from');
             $table->integer('AccessLevel')->nullable();
+            /**
             $table->foreign('UserID')
                 ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+             */
         });
     }
 

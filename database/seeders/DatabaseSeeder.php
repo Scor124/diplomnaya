@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\User;
+use App\Models\Users;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Carbon\Traits\Date;
 use Illuminate\Database\Seeder;
@@ -35,10 +35,10 @@ class DatabaseSeeder extends Seeder
         }
 
 
-        // \App\Models\User::factory(10)->create();
+        // \App\Models\Users::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
+        // \App\Models\Users::factory()->create([
+        //     'name' => 'Test Users',
         //     'email' => 'test@example.com',
         // ]);
     }

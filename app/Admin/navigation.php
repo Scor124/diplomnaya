@@ -7,19 +7,19 @@ use SleepingOwl\Admin\Navigation\Page;
 // 	   return auth()->user()->isSuperAdmin();
 // });
 //
-// AdminNavigation::addPage(\App\User::class)->setTitle('test')->setPages(function(Page $page) {
+// AdminNavigation::addPage(\App\Users::class)->setTitle('test')->setPages(function(Page $page) {
 // 	  $page
 //		  ->addPage()
 //	  	  ->setTitle('Dashboard')
 //		  ->setUrl(route('admin.dashboard'))
 //		  ->setPriority(100);
 //
-//	  $page->addPage(\App\User::class);
+//	  $page->addPage(\App\Users::class);
 // });
 //
 // // or
 //
-// AdminSection::addMenuPage(\App\User::class)
+// AdminSection::addMenuPage(\App\Users::class)
 
 return [
     [
@@ -39,11 +39,11 @@ return [
     //    'title' => 'Content',
     //    'pages' => [
     //
-    //        \App\User::class,
+    //        \App\Users::class,
     //
     //        // or
     //
-    //        (new Page(\App\User::class))
+    //        (new Page(\App\Users::class))
     //            ->setPriority(100)
     //            ->setIcon('fas fa-users')
     //            ->setUrl('users')
